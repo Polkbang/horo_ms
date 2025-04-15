@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <title>horoscope belline</title>
+    <!--<link rel="stylesheet" href="./main.css">-->
+    <script>
+    let randomIndexArray = []    
+    function setFirst() {
+        setCard();
+        document.getElementById("img1").src = "./images/"+randomNum+'.png';
+        document.querySelector('#btn1').disabled = true;	
+    }   
+    function setSecond() {
+        setCard();
+        document.getElementById("img2").src = "./images/"+randomNum+'.png';
+        document.querySelector('#btn2').disabled = true;	
+    }
+    function setThird() {
+        setCard();
+        document.getElementById("img3").src = "./images/"+randomNum+'.png';
+        document.querySelector('#btn3').disabled = true;	
+    }
+    function setCard() {
+        randomNum = Math.ceil(Math.random() * 52)
+        for (i=0; i<1; i++) {
+            randomNum = Math.ceil(Math.random() * 52)
+            if (randomIndexArray.indexOf(randomNum) === -1) {
+                randomIndexArray.push(randomNum)
+            } else {
+                i--;
+            }
+        }
+        console.log(randomNum);
+    }        
+    function setForth() {
+        setCardMs();
+        document.getElementById("img4").src = "./images/ms/"+randomNum+'.jpg';
+        document.querySelector('#btn4').disabled = true;	
+    }   
+    function setFifth() {
+        setCardMs();
+        document.getElementById("img5").src = "./images/ms/"+randomNum+'.jpg';
+        document.querySelector('#btn5').disabled = true;	
+    }
+    function setSixth() {
+        setCardMs();
+        document.getElementById("img6").src = "./images/ms/"+randomNum+'.jpg';
+        document.querySelector('#btn6').disabled = true;	
+    }
+    function setCardMs() {
+        randomNum = Math.ceil(Math.random() * 22)
+        for (i=0; i<1; i++) {
+            randomNum = Math.ceil(Math.random() * 22)
+            if (randomIndexArray.indexOf(randomNum) === -1) {
+                randomIndexArray.push(randomNum)
+            } else {
+                i--;
+            }
+        }
+        console.log(randomNum);
+    }        
+    </script>
+</head>
+    <div>
+        <span class="1st"><img src="./images/0.png" id="img1"/></span>
+        <span class="2nd"><img src="./images/0.png" id="img2"/></span>
+        <span class="3rd"><img src="./images/0.png" id="img3"/></span>
+        <span class="4th"><img src="./images/0.png" id="img4"/></span>
+        <span class="5th"><img src="./images/0.png" id="img5"/></span>
+        <span class="6th"><img src="./images/0.png" id="img6"/></span>
+    </div>
+    <div>
+        <button type="button" onclick="setFirst();" id="btn1" style="width:200px;height:60px;">select 1st card</button>
+        <button type="button" onclick="setSecond();" id="btn2"  style="width:200px;height:60px;">select 2nd card</button>
+        <button type="button" onclick="setThird();" id="btn3"  style="width:200px;height:60px;">select 3nd card</button>
+        <button type="button" onclick="setForth();" id="btn4" style="width:200px;height:60px;">select 4th card</button>
+        <button type="button" onclick="setFifth();" id="btn5"  style="width:200px;height:60px;">select 5th card</button>
+        <button type="button" onclick="setSixth();" id="btn6"  style="width:200px;height:60px;">select 6th card</button>
+        <button type="button" onclick="location.reload();">clear all!</button>
+    </div>
+</html>

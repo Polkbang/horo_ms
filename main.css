@@ -1,0 +1,7 @@
+span {
+    display: inline-block; // 블록 요소로 변환 
+    height: 320px;
+    width: 200px;
+    /* display: block은 span 요소를 블록 레벨 요소로 변환하며, 너비와 높이 설정이 가능하다. 
+    하지만 다른 요소와 같은 줄에 표시되지 않고 항상 새로운 줄에서 시작한다. */
+}
